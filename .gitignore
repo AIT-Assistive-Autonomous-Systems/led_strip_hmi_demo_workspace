@@ -1,0 +1,31 @@
+# Ignore node_modules and dependencies
+node_modules/
+*.log
+
+# Ignore build outputs
+dist/
+build/
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore VSCode settings
+*.code-workspace
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore content of src
+src/*
+!src/led_strip_hmi_demos
+!src/dummy_detection_publisher
+
+# Ignore content of install
+install/
+
+# Ignore content of log
+log/
+

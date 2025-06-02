@@ -1,0 +1,27 @@
+strips:
+  front_strip:
+    polygon:
+      - [0.1, -0.5 ,0.0]   # right end of strip
+      - [0.6, 0.0, 0.0]
+      - [0.1, 0.5, 0.0]
+    num_leds: 50
+  left_strip:
+    polygon:
+      - [0.0, 0.5, 0.0]   # right end of strip
+      - [-1.0, 0.5, 0.0]
+    num_leds: 50
+strip_frame_id: "airy_1_sensor" # frame of the LED strips
+order: 
+  - front_strip
+  - left_strip 
+closed: false # if true, the strips are connected to form a closed loop
+virtual_perception:
+  frame_id: "virtual_camera" # frame of the virtual camera for projecting the LED positions
+  min_distance: 0.1    # minimum distance from detection to LED strip to be visualized
+  max_distance: 1.5  # maximum distance from detection to LED strip to be visualized
+  publish_transform: true # if true, the virtual camera tf will be published
+  use_led_centroid_as_frame: false # if true, the virtual camera frame will be at the centroid of the LED strips
+  offset:
+    translation: [-1.0, 0.0, 0.0] # translation offset of the virtual camera frame
+    rotation: [0.0, 0.0, 0.0, 1.0] # rotation quaternion of the virtual camera frame
+

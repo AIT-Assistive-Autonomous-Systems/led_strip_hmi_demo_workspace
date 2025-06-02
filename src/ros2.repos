@@ -1,0 +1,5 @@
+repositories:
+  led_strip_hmi:
+    type: git
+    url: https://github.com/AIT-Assistive-Autonomous-Systems/led_strip_hmi.git
+    version: main

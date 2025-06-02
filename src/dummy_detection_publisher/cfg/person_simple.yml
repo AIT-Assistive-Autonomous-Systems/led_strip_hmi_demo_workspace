@@ -1,0 +1,19 @@
+persons:
+  - id: "person0"
+    poses:
+      - [0.8, -3.5, 0.25]
+      - [0.8, 3.5, 0.25]
+    velocity: 0.8
+    height: 1.8
+    width: 0.5
+  - id: "person1"
+    poses:
+      - [-0.8, 1.5, 0.25]
+      - [-1.2, -1.5, 0.25]
+    velocity: 0.3
+    height: 1.8
+    width: 0.5
+groups:
+  - id: "group0"
+    persons:
+      - "person0"

@@ -1,0 +1,30 @@
+strips:
+  front_strip:
+    polygon:
+      - [-0.28, -0.295, 0.227]
+      - [0.368, -0.295, 0.227]
+      - [0.385, -0.280,0.227]   
+      - [0.385, 0.280, 0.227]
+      - [0.368, 0.295, 0.227]
+      - [-0.28, 0.295, 0.227]
+    num_leds: 101 #273
+  back_strip: 
+    polygon:
+      - [-0.29, 0.25,0.227]   # right end of strip
+      - [-0.29, -0.25, 0.227]
+    num_leds: 31
+strip_frame_id: "base_link" # frame of the LED strips
+order: 
+  - front_strip
+  - back_strip
+closed: true # if true, the strips are connected to form a closed loop
+virtual_perception:
+  frame_id: "virtual_camera" # frame of the virtual camera for projecting the LED positions
+  min_distance: 0.4    # minimum distance from detection to LED strip to be visualized
+  max_distance: 2.0  # maximum distance from detection to LED strip to be visualized
+  publish_transform: true # if true, the virtual camera tf will be published
+  use_led_centroid_as_frame: true # if true, the virtual camera frame will be at the centroid of the LED strips
+  offset:
+    translation: [0.0, 0.0, 0.0] # translation offset of the virtual camera frame
+    rotation: [0.0, 0.0, 0.0, 1.0] # rotation quaternion of the virtual camera frame
+

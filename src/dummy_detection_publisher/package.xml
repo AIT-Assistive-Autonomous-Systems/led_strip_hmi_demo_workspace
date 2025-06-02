@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+             schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>dummy_detection_publisher</name>
+  <version>0.1.0</version>
+
+  <description>
+    Mock detection publisher that reads preconfigured person trajectories from YAML
+    and publishes vision_msgs/Detection3DArray for testing LED-strip projection and visualization.
+  </description>
+  <maintainer email="marco.wallner@ait.ac.at">Marco Wallner</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <!-- Runtime dependencies -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>vision_msgs</exec_depend>
+  <exec_depend>yaml</exec_depend>
+
+  <!-- Testing dependencies -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>pytest</test_depend>
+  <test_depend>launch_testing</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,55 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"dockerFile": "Dockerfile",
+	"build": {
+		"args": {
+			"WORKSPACE": "${containerWorkspaceFolder}"
+		}
+	},
+	"remoteUser": "ubuntu",
+	"capAdd": ["SYS_PTRACE"],
+	"securityOpt": ["seccomp=unconfined","apparmor=unconfined"],
+	"runArgs": [
+		"--network=host",
+		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+		"--ipc=host"
+		// uncomment to use intel iGPU
+		// "--device=/dev/dri"
+	],
+	"remoteEnv": {
+		"DISPLAY": "${env:DISPLAY}", // Needed for GUI try ":0" for windows
+		"WAYLAND_DISPLAY": "${env:WAYLAND_DISPLAY}",
+		"XDG_RUNTIME_DIR": "${env:XDG_RUNTIME_DIR}",
+		"PULSE_SERVER": "${env:PULSE_SERVER}",
+		"DEVCONTAINER_ENV": "desktop",
+		"ROS_DOMAIN_ID": "85",
+		"PIP_BREAK_SYSTEM_PACKAGES": "1"
+	},
+	"features": {"ghcr.io/devcontainers/features/common-utils": {
+		"username": "ubuntu",
+		"upgradePackages": false
+	}},
+	"postCreateCommand": ".devcontainer/desktop/postCreateCommand.sh",
+	// Set *default* container specific settings.json values on container create.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"althack.ament-task-provider",
+				"betwo.b2-catkin-tools",
+				"DotJoshJohnson.xml",
+				"ms-azuretools.vscode-docker",
+				"ms-iot.vscode-ros",
+				"ms-python.python",
+				"ms-vscode.cpptools",
+				"redhat.vscode-yaml",
+				"smilerobotics.urdf",
+				"streetsidesoftware.code-spell-checker",
+				"twxs.cmake",
+				"yzhang.markdown-all-in-one",
+				"zachflower.uncrustify",
+				"GitHub.copilot",
+				"ms-python.pylint"
+			]
+		}
+	}
+}
