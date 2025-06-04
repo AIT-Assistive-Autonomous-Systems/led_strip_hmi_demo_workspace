@@ -97,14 +97,14 @@
     ],
     "C_Cpp.default.intelliSenseMode": "linux-gcc-x86",
     "C_Cpp.formatting": "disabled",
-    "uncrustify.configPath.linux": "/opt/ros/humble/lib/python3.10/site-packages/ament_uncrustify/configuration/ament_code_style.cfg",
+    "uncrustify.configPath.linux": "/opt/ros/jazzy/lib/python3.10/site-packages/ament_uncrustify/configuration/ament_code_style.cfg",
     "[cpp]": {
         "editor.defaultFormatter": "ms-vscode.cpptools"
     },
     "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/*.code-search": true,
+        //"**/node_modules": true,
+        //"**/bower_components": true,
+        //"**/*.code-search": true,
         "**/build": true,
         "**/install": true,
         "**/log": true
@@ -144,10 +144,12 @@
         ".vscode-insiders",
         ".devcontainer/devcontainer.json"
     ],
-    "ament-task-provider.envSetup": "source /opt/ros/humble/setup.bash",
+    "ament-task-provider.envSetup": "source /opt/ros/jazzy/setup.bash",
     "git.terminalAuthentication": false,
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": ["tests"],
     "python.testing.autoTestDiscoverOnSaveEnabled": true,
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": true,
+    "search.useIgnoreFiles": false,
+    "cSpell.useGitignore": false
 }
