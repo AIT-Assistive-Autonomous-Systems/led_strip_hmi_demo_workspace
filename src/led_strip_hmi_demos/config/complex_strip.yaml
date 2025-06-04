@@ -30,6 +30,9 @@ order:
   - right_strip
   - front_strip
   - left_strip
+physical_strip:
+  - 0: [rear_strip, right_strip]
+  - 1: [front_strip, left_strip]
 closed: true # if true, the strips are connected to form a closed loop
 virtual_perception:
   frame_id: "virtual_camera" # frame of the virtual camera for projecting the LED positions
@@ -41,3 +44,8 @@ virtual_perception:
     translation: [0.0, 0.0, 0.0] # translation offset of the virtual camera frame
     rotation: [0.0, 0.0, 0.0, 1.0] # rotation quaternion of the virtual camera frame
 
+
+
+
+# strip0: 
+# [(num_leds: 50, start: 0.0), (num_leds:0, start: 0.2), (num_leds: 10, start: 0.4), (num_leds: 20, start:0.8)]
