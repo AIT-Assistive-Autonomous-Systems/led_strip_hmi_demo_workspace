@@ -1,4 +1,8 @@
-# ws\_led\_strip\_hmi
+# ws\_led\_strip\_hmi Demo Workspace
+
+Demo workspace for:
+* [https://github.com/AIT-Assistive-Autonomous-Systems/led_strip_hmi](https://github.com/AIT-Assistive-Autonomous-Systems/led_strip_hmi)
+* [https://github.com/AIT-Assistive-Autonomous-Systems/led_strip_hmi_embedded](https://github.com/AIT-Assistive-Autonomous-Systems/led_strip_hmi_embedded)
 
 ## Overview
 
